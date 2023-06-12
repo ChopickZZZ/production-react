@@ -1,8 +1,8 @@
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import { routeConfig } from "shared/config/routeConfig/routeConfig";
+import { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { routeConfig } from 'shared/config/routeConfig/routeConfig'
 
-function AppRouter() {
+function AppRouter () {
   return (
     <Suspense fallback={<div></div>}>
       <Routes>
@@ -15,7 +15,7 @@ function AppRouter() {
         ))}
       </Routes>
     </Suspense>
-  );
+  )
 }
 
-export default AppRouter;
+export default AppRouter
