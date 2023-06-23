@@ -9,7 +9,9 @@
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\" --fix",
-    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\""
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\"",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +45,8 @@
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^15.9.0",
+    "stylelint-config-standard-scss": "^9.0.0",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.5.0",
     "typescript": "^4.9.5",
@@ -58,6 +62,7 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
     "react-router-dom": "^6.2.1",
+    "stylelint-scss": "^5.0.1",
     "webpack-cli": "^4.10.0"
   }
 }
