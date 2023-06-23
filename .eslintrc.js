@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["standard-with-typescript", "plugin:react/recommended"],
   parserOptions: {
@@ -16,6 +17,9 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/semi": "off",
     "react/jsx-indent": [2, 2],
     "react/jsx-filename-extension": [2, { extensions: ["js", "jsx", "tsx"] }],
     "react/require-default-props": "off",
