@@ -1,10 +1,11 @@
-import { Suspense } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { routeConfig } from 'shared/config/routeConfig/routeConfig'
+import { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import { routeConfig } from "shared/config/routeConfig/routeConfig";
+import { PageLoader } from "shared/ui/PageLoader/PageLoader";
 
-function AppRouter () {
+function AppRouter() {
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={<PageLoader />}>
       <Routes>
         {Object.values(routeConfig).map(({ path, element }) => (
           <Route
@@ -15,7 +16,7 @@ function AppRouter () {
         ))}
       </Routes>
     </Suspense>
-  )
+  );
 }
 
-export default AppRouter
+export default AppRouter;

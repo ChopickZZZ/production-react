@@ -20,6 +20,8 @@ module.exports = {
     "@typescript-eslint/quotes": "off",
     "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/semi": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
     "react/jsx-indent": [2, 2],
     "react/jsx-filename-extension": [2, { extensions: ["js", "jsx", "tsx"] }],
     "react/require-default-props": "off",
