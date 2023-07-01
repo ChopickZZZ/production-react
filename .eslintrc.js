@@ -6,11 +6,15 @@ module.exports = {
   },
   extends: ["standard-with-typescript", "plugin:react/recommended"],
   parserOptions: {
+    parser: "@typescript-eslint/parser",
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: "latest",
     sourceType: "module",
-    project: ["tsconfig.json"],
+    project: "./tsconfig.json",
   },
-  plugins: ["react"],
+  plugins: ["react", "@typescript-eslint", "i18next"],
   rules: {
     "@typescript-eslint/prefer-nullish-coalescing": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
@@ -41,5 +45,8 @@ module.exports = {
     indent: [2, 2],
     quotes: "off",
     semi: "off",
+  },
+  globals: {
+    __IS_DEV__: true,
   },
 };
