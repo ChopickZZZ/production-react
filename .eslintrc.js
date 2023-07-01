@@ -4,7 +4,11 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ["standard-with-typescript", "plugin:react/recommended"],
+  extends: [
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "plugin:storybook/recommended",
+  ],
   parserOptions: {
     parser: "@typescript-eslint/parser",
     ecmaFeatures: {
@@ -29,12 +33,19 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/prefer-includes": "off",
     "react/jsx-indent": [2, 2],
-    "react/jsx-filename-extension": [2, { extensions: ["js", "jsx", "tsx"] }],
+    "react/jsx-filename-extension": [
+      2,
+      {
+        extensions: ["js", "jsx", "tsx"],
+      },
+    ],
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",
     "react/jsx-props-no-spreading": "warn",
+    "react/display-name": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "import/order": "off",
