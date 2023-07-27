@@ -53,6 +53,7 @@ module.exports = {
     "no-unused-vars": "warn",
     "comma-dangle": "off",
     "n/handle-callback-err": "warn",
+    "padded-blocks": "off",
     indent: [2, 2],
     quotes: "off",
     semi: "off",
