@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import { withScreenshot } from 'storycap'
 import { StyleDecorator } from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
 import { ThemeDecorator } from "../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { RouterDecorator } from "../../src/shared/config/storybook/RouterDecorator/RouterDecorator";
@@ -14,7 +15,8 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [StyleDecorator, RouterDecorator, ThemeDecorator(Theme.LIGHT)],
+  // @ts-ignore
+  decorators: [withScreenshot, StyleDecorator, RouterDecorator, ThemeDecorator(Theme.LIGHT)],
 };
 
 export default preview;
