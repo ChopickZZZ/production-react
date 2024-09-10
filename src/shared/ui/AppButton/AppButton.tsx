@@ -5,6 +5,7 @@ import { type ButtonHTMLAttributes, type FC } from "react";
 export enum ButtonTheme {
   OUTLINE = "outline",
   CLEAR = "clear",
+  CLEAR_INVERTED = "clearInverted",
   BACKGROUND = "background",
   BACKGROUND_INVERTED = "backgroundInverted",
 }
@@ -23,14 +24,7 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const AppButton: FC<AppButtonProps> = (props) => {
-  const {
-    className,
-    children,
-    theme,
-    square,
-    size = ButtonSize.M,
-    ...otherProps
-  } = props;
+  const { className, children, theme, square, size = ButtonSize.M, ...otherProps } = props;
 
   const mods: Record<string, boolean> = {
     [cls.square]: square,
@@ -38,11 +32,7 @@ export const AppButton: FC<AppButtonProps> = (props) => {
 
   return (
     <button
-      className={classNames(cls.AppButton, mods, [
-        className,
-        cls[theme],
-        cls[size],
-      ])}
+      className={classNames(cls.AppButton, mods, [className, cls[theme], cls[size]])}
       {...otherProps}
     >
       {children}
