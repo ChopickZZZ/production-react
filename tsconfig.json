@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "preserveValueImports": false,
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
@@ -19,10 +20,5 @@
       "module": "CommonJS"
     }
   },
-  "include": [
-    "./config/jest/setupTests.ts",
-    "./config",
-    "src",
-    "webpack.config.ts"
-  ]
+  "include": ["./config/jest/setupTests.ts", "./config", "src", "webpack.config.ts"]
 }
