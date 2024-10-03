@@ -4,11 +4,7 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: [
-    "standard-with-typescript",
-    "plugin:react/recommended",
-    "plugin:storybook/recommended",
-  ],
+  extends: ["standard-with-typescript", "plugin:react/recommended", "plugin:storybook/recommended"],
   parserOptions: {
     parser: "@typescript-eslint/parser",
     ecmaFeatures: {
@@ -46,7 +42,7 @@ module.exports = {
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",
-    "react/jsx-props-no-spreading": "warn",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "react/display-name": "off",

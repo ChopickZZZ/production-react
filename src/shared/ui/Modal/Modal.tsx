@@ -8,17 +8,20 @@ interface ModalProps {
   className?: string;
   children?: ReactNode;
   isOpen?: boolean;
+  lazy?: boolean;
   onClose?: () => void;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-  const { className, children, isOpen, onClose } = props;
+  const { className, children, isOpen, lazy, onClose } = props;
 
   const { theme } = useTheme();
 
   const [isClosing, setIsClosing] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
   const timerRef = useRef<NodeJS.Timeout>();
 
   const mods: Record<string, boolean> = {
@@ -52,6 +55,12 @@ export const Modal = (props: ModalProps) => {
 
   useEffect(() => {
     if (isOpen) {
+      setIsMounted(true);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
       window.addEventListener("keydown", onKeyDown);
     }
 
@@ -60,6 +69,10 @@ export const Modal = (props: ModalProps) => {
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [isOpen, onKeyDown]);
+
+  if (lazy && !isMounted) {
+    return null;
+  }
 
   return (
     <Portal>

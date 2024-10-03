@@ -1,0 +1,23 @@
+import cls from "./LoginForm.module.scss";
+import { classNames } from "shared/lib/classNames/classNames";
+import { useTranslation } from "react-i18next";
+import { AppButton } from "shared/ui/AppButton/AppButton";
+import { Input } from "shared/ui/Input/Input";
+
+interface LoginFormProps {
+  className?: string;
+}
+
+export const LoginForm = (props: LoginFormProps) => {
+  const { className } = props;
+
+  const { t } = useTranslation();
+
+  return (
+    <div className={classNames(cls.LoginForm, {}, [className])}>
+      <Input className={cls.input} autofocus placeholder={t("Введите логин")} />
+      <Input className={cls.input} placeholder={t("Введите пароль")} />
+      <AppButton className={cls.loginBtn}>{t("Войти")}</AppButton>
+    </div>
+  );
+};
