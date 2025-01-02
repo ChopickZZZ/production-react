@@ -8,7 +8,10 @@
   "Обновить страницу": "Reload page",
   "Главная": "Main",
   "О сайте": "About us",
-  "Войти": "Enter",
+  "Войти": "Login",
+  "Выйти": "Logout",
   "Введите логин": "Enter login",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный логин или пароль": "Invalid credentials"
 }

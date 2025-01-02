@@ -29,6 +29,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/prefer-includes": "off",
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/prefer-ts-expect-error": "warn",
