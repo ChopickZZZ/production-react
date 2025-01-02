@@ -4,6 +4,7 @@ import {
   type ReducersMapObject,
   type EnhancedStore,
   type Reducer,
+  type DeepPartial,
 } from "@reduxjs/toolkit";
 import { type UserSchema } from "entities/User";
 import { type LoginSchema } from "features/AuthByUsername";
@@ -16,6 +17,7 @@ export interface StateSchema {
 }
 
 export type StateSchemaKey = keyof StateSchema;
+export type PartialReducersMap = DeepPartial<ReducersMapObject<StateSchema>>;
 
 export interface ReducerManager {
   add: (key: StateSchemaKey, reducer: Reducer) => void;
