@@ -33,6 +33,7 @@ module.exports = {
     "@typescript-eslint/prefer-includes": "off",
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/prefer-ts-expect-error": "warn",
+    "@typescript-eslint/no-dynamic-delete": "off",
     "react/jsx-indent": [2, 2],
     "react/jsx-filename-extension": [
       2,
