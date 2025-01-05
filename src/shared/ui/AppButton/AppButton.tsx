@@ -1,6 +1,6 @@
 import cls from "./AppButton.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
-import { type ButtonHTMLAttributes, type FC } from "react";
+import { memo, type ReactNode, type ButtonHTMLAttributes } from "react";
 
 export enum ButtonTheme {
   OUTLINE = "outline",
@@ -21,17 +21,26 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ButtonTheme;
   square?: boolean;
   size?: ButtonSize;
-  disabled?: boolean
+  disabled?: boolean;
+  children?: ReactNode;
 }
 
-export const AppButton: FC<AppButtonProps> = (props) => {
-  const { className, children, theme, square, disabled, size = ButtonSize.M, ...otherProps } = props;
+export const AppButton = memo((props: AppButtonProps) => {
+  const {
+    className,
+    children,
+    theme,
+    square,
+    disabled,
+    size = ButtonSize.M,
+    ...otherProps
+  } = props;
 
   const mods: Record<string, boolean> = {
     [cls[theme]]: true,
     [cls[size]]: true,
     [cls.square]: square,
-    [cls.disabled]: disabled
+    [cls.disabled]: disabled,
   };
 
   return (
@@ -44,4 +53,4 @@ export const AppButton: FC<AppButtonProps> = (props) => {
       {children}
     </button>
   );
-};
+});

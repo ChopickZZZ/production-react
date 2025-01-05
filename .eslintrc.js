@@ -34,6 +34,7 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/prefer-ts-expect-error": "warn",
     "@typescript-eslint/no-dynamic-delete": "off",
+    "@typescript-eslint/no-misused-promises": "warn",
     "react/jsx-indent": [2, 2],
     "react/jsx-filename-extension": [
       2,
